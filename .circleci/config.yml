@@ -10,15 +10,15 @@ jobs:
     steps:
       - checkout
       - run:
-          name: docker build . -t CICDPractice
-          command: docker build . -t CICDPractice
+          name: docker build . -t cicdpractice
+          command: docker build . -t cicdpractice
   test:
     machine: true
     steps:
       - checkout
       - run:
-          name: docker run CICDPractice
-          command: docker run CICDPractice
+          name: docker run cicdpractice
+          command: docker run cicdpractice
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
