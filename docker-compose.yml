@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+    image: cicdpractice
+    container_name: cicdpractice_local
+    platform: linux/x86_64
+    volumes:
+      - ./:/app:z
+    ports:
+      - "80:8000"

@@ -10,15 +10,15 @@ jobs:
     steps:
       - checkout
       - run:
-          name: docker build . -t cicdpractice
-          command: docker build . -t cicdpractice
+          name: docker-compose build
+          command: docker-compose build
   test:
     machine: true
     steps:
       - checkout
       - run:
-          name: docker run cicdpractice
-          command: docker run cicdpractice
+          name: docker-compose up
+          command: docker-compose up
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
